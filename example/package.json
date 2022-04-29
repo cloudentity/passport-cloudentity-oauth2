@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "A sample express application using passport-cloudentity-oauth2 strategy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express-session": "^1.17.2",
+    "passport": "^0.5.2",
+    "path": "^0.12.7"
+  }
+}
