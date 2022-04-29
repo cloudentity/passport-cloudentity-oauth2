@@ -18,7 +18,6 @@ passport.use(new CloudentityStrategy({
     passReqToCallback: true
 }, function(req, accessToken, refreshToken, params, profile, done) {
     // A real application should look up the user in the database.
-    console.log('profile:', profile)
     var user = {
         accessToken: accessToken,
         idToken: params['id_token'],
