@@ -11,7 +11,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 
-    $ npm install passport-cloudentity-oauth2
+    $ npm install @cloudentity/passport-oauth2
 
 ## Usage
 
