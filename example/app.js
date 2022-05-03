@@ -1,19 +1,21 @@
+require('dotenv').config()
 var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path'),
     passport = require('passport'),
     session = require('express-session'),
     app = express(),
-    CloudentityStrategy = require('passport-cloudentity-oauth2');
+    CloudentityStrategy = require('@cloudentity/passport-oauth2');
 
 /**
  * Configure `CloudentityStrategy` by setting the values in .env
  */
 passport.use(new CloudentityStrategy({
-    authServerURL: "<authorization server URL goes here>",
-    clientID: "<client ID goes here>",
-    clientSecret: "<client secret goes here>",
-    callbackURL: "http://localhost:3000/callback",
+    authServerURL: process.env.CLOUDENTITY_AUTH_SERVER,
+    clientID: process.env.CLOUDENTITY_CLIENT_ID,
+    clientSecret: process.env.CLOUDENTITY_CLIENT_SECRET, // required if not using PKCE
+    callbackURL: process.env.CALLBACK_URL,
+    pkce: false, // defaults to false
     passReqToCallback: true
 }, function(req, accessToken, refreshToken, params, profile, done) {
     var user = {
