@@ -25,7 +25,7 @@ The Cloudentity OAuth 2.0 authentication strategy authenticates users using [Clo
 Note that `clientSecret` is not required in below configuration, if [PKCE flow](https://datatracker.ietf.org/doc/html/rfc7636) is utilized and is set to true.
 
 ```javascript
-var CloudentityStrategy = require( 'passport-cloudentity' ).Strategy;
+var CloudentityStrategy = require('@cloudentity/passport-oauth2');
 
 passport.use(new CloudentityStrategy({
     authServerURL: process.env.CLOUDENTITY_AUTH_SERVER,
