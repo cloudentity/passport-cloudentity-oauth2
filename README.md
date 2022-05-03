@@ -16,7 +16,7 @@ npm install @cloudentity/passport-oauth2
 
 #### Create an Application in Cloudentity
 
-Before using `passport-cloudentity`, you must register an application with Cloudentity. If you have not already done so, a new [application can be created within Cloudentity](https://developer.cloudentity.com/howtos/applications/connecting_and_configuring_client_apps/). If you do not have an account, sign up for a free account at [Cloudentity](https://authz.cloudentity.io/register). Once an application is created, you will be issued a Client Identifier, Client secret , authorization server URL and callback URL which needs to be configured in the strategy as shown below. You will also need to configure a callback URL which matches the route in your application.
+Before using `@cloudentity/passport-cloudentity`, you must register an application with Cloudentity. If you have not already done so, a new [application can be created within Cloudentity](https://developer.cloudentity.com/howtos/applications/connecting_and_configuring_client_apps/). If you do not have an account, sign up for a free account at [Cloudentity](https://authz.cloudentity.io/register). Once an application is created, you will be issued a Client Identifier, Client secret , authorization server URL and callback URL which needs to be configured in the strategy as shown below. You will also need to configure a callback URL which matches the route in your application.
 
 #### Configure Strategy in Nodejs application
 
