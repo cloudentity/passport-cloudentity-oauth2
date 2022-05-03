@@ -11,13 +11,12 @@ var express = require('express'),
  * Configure `CloudentityStrategy` by setting the values in .env
  */
 passport.use(new CloudentityStrategy({
-    authServerURL: process.env.CLOUDENTITY_AUTH_SERVER,
-    clientID: process.env.CLOUDENTITY_CLIENT_ID,
-    clientSecret: process.env.CLOUDENTITY_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL,
+    authServerURL: "<authorization server URL goes here>",
+    clientID: "<client ID goes here>",
+    clientSecret: "<client secret goes here>",
+    callbackURL: "http://localhost:3000/callback",
     passReqToCallback: true
 }, function(req, accessToken, refreshToken, params, profile, done) {
-    // A real application should look up the user in the database.
     var user = {
         accessToken: accessToken,
         idToken: params['id_token'],
