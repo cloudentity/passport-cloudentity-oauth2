@@ -11,7 +11,7 @@ In the root of the example folder add the authorization server URL, client ID, c
 Install dependencies.
 
 ```bash
- npm install
+ npm install @cloudentity/passport-oauth2
 ```
 
 ### Run the application
