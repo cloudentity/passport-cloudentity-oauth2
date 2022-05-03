@@ -11,7 +11,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 
-```javascript
+```bash
  npm install @cloudentity/passport-oauth2
 ```
 ## Usage
@@ -24,8 +24,6 @@ Before using `@cloudentity/passport-oauth2`, you need an [account with Cloudenti
 #### Configure Strategy in Nodejs application
 
 The Cloudentity OAuth 2.0 authentication strategy authenticates users using [Cloudentity](https://developer.cloudentity.com/get_started/cloudentity_overview/) that utilizes any of the underlying identity providers configured within the Cloudentity platform. Cloudentity platform issues OAuth & OIDC spec based access token and ID tokens to the nodejs application.  The strategy requires a `verify` callback, which accepts these credentials and calls `done` providing a user, as well as `options` specifying a client ID, client secret, authorization server URL, and callback URL.
-
-In the root of the example folder add the authorization server URL, client ID, allback URL and optionally the client secret. The client secret is not required if using PKCE. However, if not using PKCE client secret is required.
 
 ```javascript
 var CloudentityStrategy = require( 'passport-cloudentity' ).Strategy;
@@ -43,6 +41,8 @@ passport.use(new CloudentityStrategy({
   }
 ));
 ```
+
+The `clientSecret` is required if not using PKCE and it is optional if using PKCE.
 
 #### Authenticate Request in Nodejs application
 
