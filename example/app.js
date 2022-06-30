@@ -5,7 +5,7 @@ var express = require('express'),
     passport = require('passport'),
     session = require('express-session'),
     app = express(),
-    CloudentityStrategy = require('@cloudentity/passport-oauth2');
+    CloudentityStrategy = require('passport-cloudentity-oauth2');
 
 /**
  * Configure `CloudentityStrategy` by setting the values in .env

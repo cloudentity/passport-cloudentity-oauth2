@@ -1,6 +1,6 @@
 {
-    "name": "@cloudentity/passport-oauth2",
-    "version": "1.0.0",
+    "name": "passport-cloudentity-oauth2",
+    "version": "1.0.2",
     "description": "OAuth 2.0 & OIDC authentication strategy for Passport.js using Cloudentity authorization platform",
     "main": "./lib",
     "scripts": {
